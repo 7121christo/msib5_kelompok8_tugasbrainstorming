@@ -12,8 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('lesson', function (Blueprint $table) {
-            $table->id();
+            $table->id(); //Primary key
+            $table->unsignedBigInteger('course_id'); //Foreign key
+            $table->string('judul');
+            $table->text('deskripsi');
+            $table->text('materi');
             $table->timestamps();
+
+            // Define foreign key to "Course" table
+            $table->foreign('course_id')->references('id')->on('course');
         });
     }
 
