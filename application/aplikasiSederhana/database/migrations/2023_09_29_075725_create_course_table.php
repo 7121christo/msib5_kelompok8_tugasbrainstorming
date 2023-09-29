@@ -6,22 +6,26 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    //Run the migrations
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('course', function (Blueprint $table) {
             $table->id(); //Primary key
-            $table->unsignedBigInteger('idKategori'); //Foreign key
+            $table->unsignedBigInteger('kategori_id'); //Foreign key
             $table->string('kodeCourse');
             $table->string('namaCourse');
             $table->timestamps();
 
             //Define foreign key to "Kategori" table
-            $table->foreign('idKategori')->references('id')->on('kategori');
+            $table->foreign('kategori_id')->references('id')->on('kategori');
         });
     }
 
-    //Reverse the migrations
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::dropIfExists('course');
