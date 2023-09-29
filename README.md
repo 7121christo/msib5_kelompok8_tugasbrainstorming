@@ -9,5 +9,10 @@ Daftar anggota:
 2. Yedi Risdianto 
 3. Christophorus Adyatma W.S.N.
 
+Fitur: 
+1. Login dan Logout
+2. Dashboard
+3. Materi 
+
 
 “Repo ini adalah bagian dari Tugas Brainstorming Aplikasi Sederhana Studi Independen Batch 5 GITS Indonesia”
